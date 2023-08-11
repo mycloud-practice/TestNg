@@ -1,22 +1,22 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class PageTitleVerification {
     public static void main(String[] args) {
         // Set the path to your ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "C:\\gecko\\geckodriver.exe");
 
         // Create an instance of Chrome WebDriver
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
 
         // Navigate to the desired webpage
-        driver.get("https://www.example.com");
+        driver.get("https://www.google.com");
 
         // Get the page title
         String pageTitle = driver.getTitle();
 
         // Expected page title
-        String expectedTitle = "Example Domain";
+        String expectedTitle = "Googles";
 
         // Compare the actual and expected page titles
         if (pageTitle.equals(expectedTitle)) {
@@ -31,3 +31,13 @@ public class PageTitleVerification {
         driver.quit();
     }
 }
+-----------------------------------------------------------------------------------------------------
+      <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.11.0</version>
+</dependency>
+  
+  </dependencies>
