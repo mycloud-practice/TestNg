@@ -1,3 +1,20 @@
 Given a file input.txt. Read its contents and create the files and folders mention in it as per the given hierarchy. Assumption is that names without are folders Names with are files and the word after theis file extension defines chil
 
 Sample contents:
+Given a file input.txt. Read its contents and create the files and folders mention in it as per the given hierarchy. Assumption is that names without are folders Names with are files and the word after theis file extension defines chil
+
+Sample contents:
+
+To assess learners on Shell Scripting implementation
+
+Cloud, Ubuntu
+
+2
+
+src/main
+
+src/main/java
+
+src/main/java/App.java
+
+The above file should create sec> main→→→ java→→ App.java in the current durectory
