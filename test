@@ -1,0 +1,52 @@
+import static org.junit.Assert.*;
+
+ 
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+ 
+
+import test.calculator;
+
+ 
+
+public class testcase {
+    static calculator calc;
+
+ 
+
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception {
+        calc = new calculator();
+    }
+
+ 
+
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+    }
+
+ 
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+ 
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+ 
+
+    @org.junit.Test
+    public final void testAdd() {
+        int result = calc.add(58,26);
+        assertTrue(result == 84);
+    }
+}
