@@ -1,0 +1,3 @@
+Given a file input.txt. Read its contents and create the files and folders mention in it as per the given hierarchy. Assumption is that names without are folders Names with are files and the word after theis file extension defines chil
+
+Sample contents:
