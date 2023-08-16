@@ -18,3 +18,28 @@ src/main/java
 src/main/java/App.java
 
 The above file should create sec> main→→→ java→→ App.java in the current durectory
+
+
+-----------------------------------
+#!/bin/bash
+
+while IFS= read -r line; do
+    if [[ $line == *".java"* ]]; then
+        # Extract folder and file name
+        folder_path="${line%/*}"
+        file_name="${line##*/}"
+
+        # Create the folder path
+        mkdir -p "$folder_path"
+
+        # Create the file
+        touch "$line"
+
+    else
+        # Create the folder path
+        mkdir -p "$line"
+    fi
+done < input.txt
+
+echo "Directory structure created based on input.txt contents."
+
