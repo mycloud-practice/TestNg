@@ -1,0 +1,32 @@
+1)Create slave VM install java and maven.
+
+sudo apt install openjdk-11-jdk
+
+sudo apt install maven
+
+2)generate ssh key rsa or id_ed25519 in master vm.
+ssh-keygen
+
+3)copy pub rsa key from master .ssh folder to slave .shh folder in authorized_keys
+
+4)ssh to slave vm through master by command 
+ssh slave-vm
+5)ssh slave_vm so that slave is added to known hosts.
+
+6)copy .ssh folder of master to /var/lib/jenkins
+sudo cp -r .ssh /var/lib/jenkins
+
+7)give permission of that .ssh folder to Jenkins
+sudo chown -R jenkins .ssh
+
+8)Check permission
+sudo ls -la /var/lib/jenkins
+
+9)Open jenkins and add node in manage Jenkins
+remote root dir -> /home/azureuser
+Host -> slave-vm
+add label- give name
+- in credentials add master pvt key as password and username azureuser
+- choose availability and save
+- In pipeline script agent { label 'slave-vm' } 
+Run any pipeline and see the agent
